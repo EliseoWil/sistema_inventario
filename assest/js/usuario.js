@@ -53,7 +53,6 @@ function MNuevoUsuario(){
     }else{
       document.getElementById("error-pass").innerHTML="Los campos de contraseña no coinciden"
     }
-  
   }
   
   function MEditUsuario(id){

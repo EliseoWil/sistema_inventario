@@ -56,10 +56,12 @@ if (isset($_SESSION["ingreso"]) && $_SESSION["ingreso"] == "ok") {
     include "asideMenu.php";
     if (isset($_GET["ruta"])) {
         if (
-            $_GET["ruta"] == "inicio" 
-            || $_GET["ruta"] == "salir" 
+            $_GET["ruta"] == "inicio"
+            || $_GET["ruta"] == "salir"
             || $_GET["ruta"] == "VUsuario"
             || $_GET["ruta"] == "VCliente"
+            || $_GET["ruta"] == "VCategoria"
+            || $_GET["ruta"] == "VTalla"
         ) {
             include $_GET["ruta"] . ".php";
         }

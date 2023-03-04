@@ -1,5 +1,5 @@
 
-<div class="modal-header bg-primary">
+<div class="modal-header bg-dark">
   <h4 class="modal-title font-weight-light">Registrar nuevo Cliente</h4>
   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
     <span aria-hidden="true">&times;</span>

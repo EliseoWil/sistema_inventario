@@ -5,7 +5,7 @@ require "../../modelo/usuarioModelo.php";
 $id = $_GET["id"];
 $usuario = ControladorUsuario::ctrInfoUsuario($id);
 ?>
-<div class="modal-header primary">
+<div class="modal-header bg-dark">
   <h4 class="modal-title font-weight-light">Editar Usuario</h4>
   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
     <span aria-hidden="true">&times;</span>

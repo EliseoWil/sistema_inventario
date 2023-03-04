@@ -55,7 +55,7 @@ class ModeloCliente{
     $telCliente=$data["telCliente"];
     $idCliente=$data["idCliente"];
 
-    $stmt=Conexion::conectar()->prepare("update cliente set direccion_cliente='$rzCliente', nit_ci_cliente='$nitCliente', nombre_cliente='$nomCliente', direccion_cliente='$dirCliente', telefono_cliente='$telCliente' where id_cliente=$idCliente");
+    $stmt=Conexion::conectar()->prepare("update cliente set razon_social_cliente='$rzCliente', nit_ci_cliente='$nitCliente',  direccion_cliente='$dirCliente', nombre_cliente='$nomCliente', telefono_cliente='$telCliente' where id_cliente=$idCliente");
 
     if($stmt->execute()){
       return "ok";

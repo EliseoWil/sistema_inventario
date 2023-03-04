@@ -55,9 +55,9 @@ class ControladorCliente{
       "telCliente"=>$_POST["telCliente"],
     );
 
-    /* $respuesta=ModeloCliente::mdlEditCliente($data); */
-
-    var_dump($data) ;
+    $respuesta=ModeloCliente::mdlEditCliente($data);
+    echo $respuesta;
+    /* var_dump($data) ; */
 
   }
 

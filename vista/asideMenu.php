@@ -79,12 +79,12 @@
                                     </a>
                                 </li>
 
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="FNuevoCliente" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Registrar Cliente</p>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
 
@@ -106,7 +106,7 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="VProducto" class="nav-link">
+                                    <a href="VCategoria" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Categoría</p>
                                     </a>
@@ -114,7 +114,7 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="VProducto" class="nav-link">
+                                    <a href="VTalla" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Talla</p>
                                     </a>
@@ -122,7 +122,7 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="VProducto" class="nav-link">
+                                    <a href="VColor" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Color</p>
                                     </a>
@@ -130,7 +130,7 @@
                             </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="VProducto" class="nav-link">
+                                    <a href="VUniMedida" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Unidad de Medida</p>
                                     </a>
@@ -150,13 +150,13 @@
 
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="FormVenta" class="nav-link">
+                                    <a href="VNotaVenta" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Nota de Venta</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="VFactura" class="nav-link">
+                                    <a href="VNotaSalida" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Nota de Salida</p>
                                     </a>
@@ -176,13 +176,13 @@
 
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="FormVenta" class="nav-link">
+                                    <a href="VNotaIngreso" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Nota de Ingreso</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="VFactura" class="nav-link">
+                                    <a href="VOtroIngreso" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Otros Ingresos</p>
                                     </a>

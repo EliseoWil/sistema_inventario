@@ -1,10 +1,10 @@
-function MNuevoCliente() {
+function MNuevoCategoria() {
   $("#modal-default").modal("show")
 
   var obj = ""
   $.ajax({
     type: "POST",
-    url: "vista/cliente/FNuevoCliente.php",
+    url: "vista/categoria/FNuevoCategoria.php",
     data: obj,
     success: function (data) {
       $("#content-default").html(data)
@@ -12,13 +12,13 @@ function MNuevoCliente() {
   })
 }
 
-function RegCliente() {
+function RegCategoria() {
 
-  var formData = new FormData($("#FormRegCliente")[0])
+  var formData = new FormData($("#FormRegCategoria")[0])
 
   $.ajax({
     type: "POST",
-    url: "controlador/clienteControlador.php?ctrRegCliente",
+    url: "controlador/categoriaControlador.php?ctrRegCategoria",
     data: formData,
     cache: false,
     contentType: false,
@@ -29,7 +29,7 @@ function RegCliente() {
         Swal.fire({
           icon: 'success',
           showConfirmButton: false,
-          title: 'El cliente ha sido registrado',
+          title: 'El Categoria ha sido registrado',
           timer: 1000
         })
         setTimeout(function () {
@@ -47,13 +47,13 @@ function RegCliente() {
     }
   })
 }
-function MEditCliente(id) {
+function MEditCategoria(id) {
   $("#modal-default").modal("show")
 
   var obj = ""
   $.ajax({
     type: "POST",
-    url: "vista/cliente/FEditCliente.php?id=" + id,
+    url: "vista/categoria/FEditCategoria.php?id=" + id,
     data: obj,
     success: function (data) {
       $("#content-default").html(data)
@@ -61,14 +61,12 @@ function MEditCliente(id) {
   })
 }
 
-function EditCliente() {
-  let rzCliente=document.getElementById("rzCliente").value
-
-  var formData = new FormData($("#FormEditCliente")[0])
+function EditCategoria() {
+  var formData = new FormData($("#FormEditCategoria")[0])
 
   $.ajax({
     type: "POST",
-    url: "controlador/clienteControlador.php?ctrEditCliente",
+    url: "controlador/categoriaControlador.php?ctrEditCategoria",
     data: formData,
     cache: false,
     contentType: false,
@@ -79,7 +77,7 @@ function EditCliente() {
         Swal.fire({
           icon: 'success',
           showConfirmButton: false,
-          title: 'El cliente ha sido actualizado',
+          title: 'La Categoría ha sido actualizado',
           timer: 1000
         })
         setTimeout(function () {
@@ -99,13 +97,13 @@ function EditCliente() {
 }
 
 
-function MVerCliente(id) {
+function MVerCategoria(id) {
   $("#modal-default").modal("show")
 
   var obj = ""
   $.ajax({
     type: "POST",
-    url: "vista/cliente/MVercliente.php?id=" + id,
+    url: "vista/Categoria/MVerCategoria.php?id=" + id,
     data: obj,
     success: function (data) {
       $("#content-default").html(data)
@@ -113,13 +111,13 @@ function MVerCliente(id) {
   })
 }
 
-function MElicliente(id) {
+function MEliCategoria(id) {
   var obj = {
     id: id
   }
 
   Swal.fire({
-    title: '¿Esta seguro de eliminar este cliente?',
+    title: '¿Esta seguro de eliminar este Categoria?',
     showDenyButton: true,
     showCancelButton: false,
     confirmButtonText: 'Confirmar',
@@ -129,14 +127,14 @@ function MElicliente(id) {
       $.ajax({
         type: "POST",
         data: obj,
-        url: "controlador/clienteControlador.php?ctrElicliente",
+        url: "controlador/CategoriaControlador.php?ctrEliCategoria",
         success: function (data) {
 
           if (data == "ok") {
             Swal.fire({
               icon: 'success',
               showConfirmButton: false,
-              title: 'cliente eliminado',
+              title: 'Categoria eliminado',
               timer: 1000
             })
             setTimeout(function () {
@@ -146,7 +144,7 @@ function MElicliente(id) {
             Swal.fire({
               icon: 'error',
               title: 'Error!!!',
-              text: 'El cliente no puede ser eliminado, porque esta en uso',
+              text: 'El Categoria no puede ser eliminado, porque esta en uso',
               showConfirmButton: false,
               timer: 1500
             })
@@ -158,19 +156,19 @@ function MElicliente(id) {
   })
 }
 
-function Comprobarcliente() {
-  let logincliente = document.getElementById("logincliente").value
+function ComprobarCategoria() {
+  let loginCategoria = document.getElementById("loginCategoria").value
   var obj = {
-    login: logincliente
+    login: loginCategoria
   }
   $.ajax({
     type: "POST",
     data: obj,
-    url: "controlador/clienteControlador.php?ctrBuscliente",
+    url: "controlador/CategoriaControlador.php?ctrBusCategoria",
     success: function (data) {
       if (data == "1") {
         $("#error-login").addClass("text-danger")
-        document.getElementById("error-login").innerHTML = "cliente en uso, intente con otro"
+        document.getElementById("error-login").innerHTML = "Categoria en uso, intente con otro"
         $("#guardar").attr("disabled", true)
       } else {
         document.getElementById("error-login").innerHTML = ""

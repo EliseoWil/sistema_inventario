@@ -3,9 +3,9 @@ require "../../controlador/clienteControlador.php";
 require "../../modelo/clienteModelo.php";
 
 $id = $_GET["id"];
-$cliente = Controladorcliente::ctrInfocliente($id);
+$cliente = ControladorCliente::ctrInfoCliente($id);
 ?>
-<div class="modal-header bg-primary">
+<div class="modal-header bg-dark">
   <h4 class="modal-title font-weight-light">Editar Cliente</h4>
   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -52,7 +52,7 @@ $cliente = Controladorcliente::ctrInfocliente($id);
       }
     })
     $(document).ready(function(){
-      $("#FormRegCliente").validate({
+      $("#FormEditCliente").validate({
       rules:{
         rzCliente:{
           required:true,
